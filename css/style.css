@@ -2585,3 +2585,193 @@ body.theme-xp #startMenu {
         border-top: 1px solid #95bdee;
     }
 }
+
+/* ============================================================
+   Retro Windows Tab Control & CampusDesk Styles
+   ============================================================ */
+.win-tabs {
+    display: flex;
+    gap: 3px;
+    border-bottom: 1.5px solid var(--win-dark);
+    padding: 0 4px;
+    margin-top: 4px;
+    margin-bottom: 0;
+    background: var(--win-bg);
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.win-tab-btn {
+    background: var(--win-bg);
+    border-top: 1.5px solid var(--win-light);
+    border-left: 1.5px solid var(--win-light);
+    border-right: 1.5px solid var(--win-dark);
+    border-bottom: none;
+    padding: 4px 10px;
+    font-size: 11px;
+    cursor: pointer;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    font-family: inherit;
+    margin-bottom: -1.5px;
+    font-weight: normal;
+    color: var(--win-text);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    outline: none;
+    transition: background 0.1s ease;
+}
+
+.win-tab-btn:hover {
+    background: #e8e8e8;
+}
+
+.win-tab-btn.active {
+    background: #ffffff;
+    border-bottom: 2px solid #ffffff;
+    font-weight: bold;
+    position: relative;
+    z-index: 3;
+    padding-top: 5px;
+    box-shadow: 0 -2px 3px rgba(0,0,0,0.08);
+}
+
+body.theme-xp .win-tab-btn.active {
+    color: var(--win-blue-start);
+    border-top: 2.5px solid #e28a34;
+}
+
+.win-tab-content {
+    background: #ffffff;
+    border-left: 1.5px solid var(--win-light);
+    border-right: 1.5px solid var(--win-dark);
+    border-bottom: 1.5px solid var(--win-dark);
+    border-top: 1px solid #d0d0d0;
+    padding: 14px 16px;
+    min-height: 280px;
+    max-height: 520px;
+    overflow-y: auto;
+    font-size: 11px;
+    line-height: 1.5;
+    position: relative;
+    z-index: 2;
+}
+
+.win-tab-pane {
+    display: none;
+}
+
+.win-tab-pane.active {
+    display: block;
+    animation: fadeIn 0.15s ease-in;
+}
+
+/* Retro Table */
+.retro-table-wrapper {
+    overflow-x: auto;
+    margin: 10px 0;
+    border: 1px solid var(--win-dark);
+    box-shadow: 1px 1px 0 #fff;
+}
+
+.retro-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+    background: #ffffff;
+}
+
+.retro-table th {
+    background: var(--win-bg);
+    border: 1px solid var(--win-border-dark);
+    padding: 6px 8px;
+    text-align: left;
+    font-weight: bold;
+    color: var(--win-dark);
+    box-shadow: inset 1px 1px 0 #ffffff;
+    font-size: 10.5px;
+}
+
+.retro-table td {
+    border: 1px solid #e0e0e0;
+    padding: 6px 8px;
+    color: #222222;
+    vertical-align: top;
+    font-size: 11px;
+}
+
+.retro-table tr:nth-child(even) td {
+    background: #f8fafc;
+}
+
+.retro-table code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 10.5px;
+    background: #edf2f9;
+    padding: 1px 4px;
+    border: 1px solid #d0dced;
+    border-radius: 2px;
+    color: #00249c;
+}
+
+/* Retro Code Box */
+.retro-code-box {
+    background: #0d1117;
+    color: #00ff66;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 11px;
+    padding: 10px 12px;
+    border-top: 2px solid #30363d;
+    border-left: 2px solid #30363d;
+    border-right: 2px solid #58a6ff;
+    border-bottom: 2px solid #58a6ff;
+    border-radius: 2px;
+    margin: 8px 0;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    line-height: 1.45;
+    box-shadow: inset 1px 1px 4px rgba(0,0,0,0.8);
+}
+
+.retro-diagram {
+    background: #f3f6fa;
+    border: 1px solid #b4c9e4;
+    padding: 10px 12px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 10.5px;
+    line-height: 1.5;
+    overflow-x: auto;
+    color: #001f66;
+    margin: 8px 0;
+    border-radius: 2px;
+    box-shadow: inset 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+.campusdesk-feature-badge {
+    background: #008000;
+    color: #ffffff;
+    font-size: 9px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    box-shadow: 1px 1px 0 rgba(0,0,0,0.2);
+}
+
+.campusdesk-member-pill {
+    background: #eef5ee;
+    color: #006000;
+    border: 1px solid #99cc99;
+    padding: 2px 7px;
+    font-size: 10.5px;
+    border-radius: 2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-weight: 500;
+}
+

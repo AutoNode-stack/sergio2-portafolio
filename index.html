@@ -152,6 +152,11 @@
             <span>Skills.cpl</span>
         </div>
         
+        <div class="desktop-icon" data-window="campusdeskWindow">
+            <img src="assets/icons/retro/springboot.svg" alt="CampusDesk Icon">
+            <span>CampusDesk.exe</span>
+        </div>
+        
         <div class="desktop-icon" data-window="contactWindow">
             <img src="assets/icons/contact.svg" alt="Contact Icon">
             <span>Contact.lnk</span>
@@ -247,9 +252,10 @@
                 <h4 style="font-size: 12px;">💻 Desarrollador de Software Fullstack (En formación)</h4>
                 <div class="company">Campuslands</div>
                 <div class="date">2025 – Actualidad | Bucaramanga / Floridablanca</div>
-                <p>Desarrollo intensivo de software fullstack aplicando metodologías ágiles (Scrum), arquitectura modular y buenas prácticas de código. Implementación de soluciones frontend (JavaScript Vanilla, HTML5, CSS3) y backend (Python OOP, Java, MySQL, automatizaciones con n8n).</p>
-                <div style="margin-top: 6px;">
-                    <a href="javascript:void(0)" onclick="openWindow('skillsWindow')" class="btn" style="text-decoration: none; display: inline-block; font-size: 10px; padding: 2px 8px; cursor: pointer;">📂 Ver Catálogo Completo de Proyectos en Skills.cpl ➔</a>
+                <p>Desarrollo intensivo de software fullstack aplicando metodologías ágiles (Scrum), arquitectura modular y buenas prácticas de código. Implementación de soluciones frontend (JavaScript Vanilla modular, HTML5, CSS3) y backend empresarial (Java 21 LTS, Spring Boot 4.1.1 con Spring Security 6 y JWT, PostgreSQL, Python OOP y automatizaciones con n8n). Desarrollo del proyecto insignia <strong>CAMPUSDESK</strong> (Plataforma de Mesa de Ayuda y Gestión de Tickets).</p>
+                <div style="margin-top: 6px; display: flex; gap: 6px; flex-wrap: wrap;">
+                    <a href="javascript:void(0)" onclick="openWindow('campusdeskWindow')" class="btn btn-primary" style="text-decoration: none; display: inline-flex; align-items: center; gap: 4px; font-size: 10px; padding: 2px 8px; cursor: pointer;">🌱 Abrir CampusDesk.exe (Spring Boot) ➔</a>
+                    <a href="javascript:void(0)" onclick="openWindow('skillsWindow')" class="btn" style="text-decoration: none; display: inline-block; font-size: 10px; padding: 2px 8px; cursor: pointer;">📂 Ver Catálogo de Proyectos en Skills.cpl ➔</a>
                 </div>
             </div>
 
@@ -408,6 +414,47 @@
             </div>
 
             <div class="projects-container">
+                <!-- 0. CAMPUSDESK (Spring Boot Insignia) -->
+                <div class="project-card featured" style="border-left: 4px solid #008000; background: #fbfefb;">
+                    <div class="project-card-header">
+                        <div class="project-card-title">
+                            <img src="assets/icons/retro/springboot.svg" alt="" style="width: 18px; height: 18px; vertical-align: middle;">
+                            <span>CAMPUSDESK: Plataforma de Mesa de Ayuda y Gestión de Tickets</span>
+                        </div>
+                        <span class="project-badge" style="background: #008000; color: #ffffff; border: 1px solid #004d00; box-shadow: 1px 1px 0 #fff;">🌱 Spring Boot Enterprise</span>
+                    </div>
+                    <div class="project-meta">Campuslands | Java 21 LTS, Spring Boot 4.1.1, Spring Security 6 &amp; PostgreSQL | 2026</div>
+                    <div class="project-desc">
+                        Sistema web integral para la recepción, priorización, asignación, seguimiento y resolución de incidencias y solicitudes técnicas en campus institucionales y corporativos. Arquitectura desacoplada y sin estado (stateless), control de acceso granular basado en roles (RBAC) con permisos dinámicos, ciclo de vida estricto para contraseñas y auditoría histórica de eventos.
+                    </div>
+                    <div style="font-size: 10.5px; color: #333333; margin-bottom: 8px; background: #f0f7f0; padding: 5px 8px; border-left: 2px solid #008000; border-radius: 2px;">
+                        <strong>👥 Integrantes del Proyecto:</strong> Sergio Aparicio, Jhon Reyes, Sebastian Ayala, Juan Diego León<br>
+                        <strong>✨ Créditos a:</strong> Cristian Diaz — Desarrollador de Software
+                    </div>
+                    <div class="project-tech-tags">
+                        <span class="tech-pill" style="border-color: #008000; color: #006600; font-weight: bold;">Spring Boot 4.1.1</span>
+                        <span class="tech-pill" style="border-color: #008000; color: #006600; font-weight: bold;">Java 21 LTS</span>
+                        <span class="tech-pill" style="border-color: #008000; color: #006600;">Spring Security 6 (JWT)</span>
+                        <span class="tech-pill">Spring Data JPA / Hibernate</span>
+                        <span class="tech-pill">PostgreSQL 14+</span>
+                        <span class="tech-pill">Swagger UI / OpenAPI 3</span>
+                        <span class="tech-pill">Auth0 Java JWT</span>
+                        <span class="tech-pill">BCrypt Encoder</span>
+                        <span class="tech-pill">MapStruct &amp; Lombok</span>
+                        <span class="tech-pill">Gradle Wrapper 8.14.3</span>
+                        <span class="tech-pill">JavaScript ES6+ Vanilla</span>
+                        <span class="tech-pill">HTML5 &amp; CSS3</span>
+                    </div>
+                    <div class="project-card-footer" style="gap: 8px;">
+                        <a href="javascript:void(0)" onclick="openWindow('campusdeskWindow')" class="btn-project-repo" style="background: #eaf6ea; color: #004d00; border-color: #008000;">
+                            📖 Ver Ficha Técnica (CampusDesk.exe) ➔
+                        </a>
+                        <a href="https://github.com/Sergioandresaparicio/CAMPUSDESK" target="_blank" rel="noopener noreferrer" class="btn-project-repo">
+                            📁 Ver Código en GitHub ➔
+                        </a>
+                    </div>
+                </div>
+
                 <!-- 1. NeoMetro Hackatón -->
                 <div class="project-card featured">
                     <div class="project-card-header">
@@ -965,6 +1012,472 @@
         </div>
     </div>
 
+    <!-- CampusDesk Window (Spring Boot Enterprise Project) -->
+    <div class="window" id="campusdeskWindow" style="top: 45px; left: 90px; width: 720px; max-width: 95vw;">
+        <div class="window-titlebar">
+            <div class="window-titlebar-title">
+                <img src="assets/icons/retro/springboot.svg" alt="">
+                <span>CampusDesk.exe - Plataforma de Mesa de Ayuda y Gestión de Tickets</span>
+            </div>
+            <div class="window-controls">
+                <button class="window-btn">_</button>
+                <button class="window-btn">□</button>
+                <button class="window-btn">✕</button>
+            </div>
+        </div>
+        <div class="window-menu">
+            <span>Archivo</span>
+            <span>Ver</span>
+            <span>Módulos</span>
+            <span>Swagger</span>
+            <span>Ayuda</span>
+        </div>
+
+        <!-- Window Tab Bar -->
+        <div class="win-tabs">
+            <button class="win-tab-btn active" data-tab="cdTabResumen">
+                <span>📋</span> Resumen &amp; Equipo
+            </button>
+            <button class="win-tab-btn" data-tab="cdTabStack">
+                <span>🛠️</span> Stack &amp; Arquitectura
+            </button>
+            <button class="win-tab-btn" data-tab="cdTabSeguridad">
+                <span>🔐</span> Seguridad &amp; RBAC
+            </button>
+            <button class="win-tab-btn" data-tab="cdTabConfig">
+                <span>⚙️</span> Configuración &amp; Swagger
+            </button>
+            <button class="win-tab-btn" data-tab="cdTabVistas">
+                <span>🖥️</span> Vistas Frontend (12)
+            </button>
+        </div>
+
+        <!-- Window Tab Body -->
+        <div class="win-tab-content">
+            <!-- TAB 1: Resumen & Equipo -->
+            <div class="win-tab-pane active" id="cdTabResumen">
+                <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #d0d0d0; padding-bottom: 8px; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+                    <div>
+                        <h2 style="margin: 0; color: #005500; font-size: 14px; display: flex; align-items: center; gap: 6px;">
+                            <img src="assets/icons/retro/springboot.svg" alt="" style="width: 20px; height: 20px;">
+                            CAMPUSDESK — Mesa de Ayuda y Gestión de Tickets
+                        </h2>
+                        <div style="font-size: 11px; color: #555; margin-top: 2px;">
+                            Arquitectura Backend Empresarial con Spring Boot 4.1.1 &amp; Java 21 LTS
+                        </div>
+                    </div>
+                    <span class="campusdesk-feature-badge">🌱 SPRING BOOT CORE</span>
+                </div>
+
+                <div class="info-section">
+                    <h3>DESCRIPCIÓN GENERAL DEL SISTEMA</h3>
+                    <p>
+                        Sistema web integral diseñado para la recepción, priorización, asignación inteligente, seguimiento y resolución de incidencias y solicitudes técnicas en entornos institucionales o corporativos de campus.
+                    </p>
+                    <p>
+                        Diseñado con una <strong>arquitectura desacoplada y sin estado (stateless)</strong>, incorpora control de acceso granular basado en roles (<strong>RBAC</strong>) con permisos dinámicos, ciclo de vida estricto para contraseñas de primer acceso y una completa bitácora de auditoría histórica para trazabilidad operativa de eventos.
+                    </p>
+                </div>
+
+                <div class="info-section" style="background: #f4fbf4; border: 1px solid #c2e2c2; padding: 10px; border-radius: 2px; margin-top: 10px;">
+                    <h3 style="color: #006600; margin-top: 0;">👥 INTEGRANTES DEL PROYECTO</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0;">
+                        <span class="campusdesk-member-pill">👤 Sergio Aparicio</span>
+                        <span class="campusdesk-member-pill">👤 Jhon Reyes</span>
+                        <span class="campusdesk-member-pill">👤 Sebastian Ayala</span>
+                        <span class="campusdesk-member-pill">👤 Juan Diego León</span>
+                    </div>
+                    <div style="margin-top: 8px; font-size: 11px; color: #333;">
+                        <strong>✨ Créditos especiales a:</strong> <strong>Cristian Diaz</strong> — Desarrollador de Software
+                    </div>
+                </div>
+
+                <div class="info-section" style="margin-top: 12px;">
+                    <h3>📋 REQUISITOS PREVIOS DEL ENTORNO</h3>
+                    <ul style="padding-left: 18px; line-height: 1.6;">
+                        <li><strong>Java Development Kit (JDK):</strong> Versión 21 LTS instalada y referenciada en <code>JAVA_HOME</code> (<code>java -version</code>).</li>
+                        <li><strong>PostgreSQL:</strong> Versión 14 o superior en ejecución sobre puerto estándar 5432 (<code>psql --version</code>).</li>
+                        <li><strong>Navegador Web Moderno:</strong> Google Chrome, Microsoft Edge, Mozilla Firefox o Brave.</li>
+                        <li><strong>Git:</strong> Para control de versiones y clonación del repositorio.</li>
+                        <li><strong>Servidor HTTP Local (Frontend):</strong> Live Server (VS Code), Python 3 (<code>python -m http.server</code>) o Node.js (<code>npx serve</code>).</li>
+                    </ul>
+                    <div style="font-size: 10.5px; background: #ffffdd; border: 1px solid #d4c060; padding: 6px 8px; margin-top: 6px;">
+                        💡 <strong>Nota:</strong> No es necesario tener Gradle instalado globalmente; el backend incluye los ejecutables del Gradle Wrapper (<code>gradlew</code> y <code>gradlew.bat</code>). El frontend está desarrollado en JavaScript Vanilla nativo, sin requerir <code>npm install</code> ni procesos de compilación o transpilación.
+                    </div>
+                </div>
+
+                <div style="margin-top: 15px; display: flex; justify-content: flex-end; gap: 8px;">
+                    <a href="https://github.com/Sergioandresaparicio/CAMPUSDESK" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 12px;">
+                        📁 Repositorio en GitHub ➔
+                    </a>
+                </div>
+            </div>
+
+            <!-- TAB 2: Stack & Arquitectura -->
+            <div class="win-tab-pane" id="cdTabStack">
+                <h3>🛠️ TECNOLOGÍAS UTILIZADAS &amp; ARQUITECTURA TÉCNICA</h3>
+                
+                <div class="retro-table-wrapper">
+                    <table class="retro-table">
+                        <thead>
+                            <tr>
+                                <th>Capa / Dimensión</th>
+                                <th>Componente / Tecnología</th>
+                                <th>Especificación y Función Clave</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="7"><strong>Backend</strong><br>(Spring Boot)</td>
+                                <td><code>Java 21 LTS</code></td>
+                                <td>Lenguaje base con funciones modernas y soporte LTS a largo plazo.</td>
+                            </tr>
+                            <tr>
+                                <td><code>Spring Boot 4.1.1</code></td>
+                                <td>Framework principal de microservicios y APIs RESTful.</td>
+                            </tr>
+                            <tr>
+                                <td><code>Spring Security 6</code></td>
+                                <td>Filtros JWT simétricos HMAC256, stateless y autorización granular con <code>@PreAuthorize</code>.</td>
+                            </tr>
+                            <tr>
+                                <td><code>Spring Data JPA / Hibernate</code></td>
+                                <td>ORM con sincronización de esquema relacional automático (<code>ddl-auto=update</code>).</td>
+                            </tr>
+                            <tr>
+                                <td><code>Auth0 Java JWT (v4.3.0) &amp; BCrypt</code></td>
+                                <td>Generación, firma simétrica y validación criptográfica de tokens y contraseñas.</td>
+                            </tr>
+                            <tr>
+                                <td><code>MapStruct 1.5.5 &amp; Project Lombok</code></td>
+                                <td>Mapeo de DTOs en tiempo de compilación y optimización de boilerplate.</td>
+                            </tr>
+                            <tr>
+                                <td><code>Springdoc OpenAPI UI 3.1.1</code></td>
+                                <td>Documentación interactiva de endpoints (Swagger UI).</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3"><strong>Frontend</strong><br>(Cliente Web)</td>
+                                <td><code>HTML5 Semántico &amp; CSS3</code></td>
+                                <td>Diseño adaptativo (responsive design), variables CSS y componentes modulares.</td>
+                            </tr>
+                            <tr>
+                                <td><code>JavaScript ES6+ Vanilla</code></td>
+                                <td>Módulos ES6 (import/export), Fetch API asíncrono y almacenamiento en <code>sessionStorage</code>.</td>
+                            </tr>
+                            <tr>
+                                <td><code>SVGs Optimizados</code></td>
+                                <td>Iconografía y logotipos vectoriales institucionales en alta fidelidad.</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2"><strong>Base de Datos</strong></td>
+                                <td><code>PostgreSQL 14+</code></td>
+                                <td>Motor relacional principal para persistencia de producción y desarrollo.</td>
+                            </tr>
+                            <tr>
+                                <td><code>H2 Database &amp; JUnit 5</code></td>
+                                <td>Base en memoria para ejecución de suites de pruebas automatizadas y aisladas.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 style="margin-top: 14px;">📁 ESTRUCTURA DE DIRECTORIOS DEL REPOSITORIO</h3>
+                <div class="retro-diagram">
+CAMPUSDESK/
+├── README.md                                  # Documentación general del proyecto
+├── spring-security-user-role-management/       # Código fuente del Backend (Spring Boot + Java 21)
+│   ├── build.gradle                           # Dependencias y configuración de compilación
+│   ├── gradlew / gradlew.bat                  # Wrapper de Gradle (Linux/macOS y Windows)
+│   ├── README.md                              # Documentación técnica extendida del backend
+│   └── src/
+│       ├── main/java/com/roles/usermanagement/
+│       │   ├── domain/                        # Modelos, DTOs y lógica transversal
+│       │   ├── modules/                       # Módulos de soporte (ticket, assignment, etc.)
+│       │   ├── persistance/                   # Entidades JPA, repositorios y mappers
+│       │   └── web/                           # Controladores REST, filtros y configuración
+│       └── main/resources/
+│           ├── application.properties         # Perfil activo por defecto (dev)
+│           └── application-dev.properties     # Parámetros de conexión a BD y JWT
+└── Frontend/                                  # Código fuente del Frontend (HTML, CSS y JS)
+    ├── Assets/                                # Iconos vectoriales e imágenes estáticas
+    ├── Scripts/                               # Módulos JS, configuración de API y controladores
+    ├── stylesheet/                            # Hojas de estilo CSS modularizadas
+    ├── index.html                             # Vista de inicio de sesión y cambio de clave
+    ├── superadmin.html                        # Panel de administración de usuarios y roles
+    ├── technician.html                        # Panel para técnicos con tickets asignados
+    ├── user.html                              # Panel de inicio para usuarios solicitantes
+    ├── create-ticket.html                     # Formulario de radicación de incidencias
+    ├── my-tickets.html                        # Seguimiento de tickets propios
+    ├── ticketlist.html                        # Vista general y filtrado de tickets
+    └── assignation.html                       # Gestión y reasignación de personal técnico
+                </div>
+            </div>
+
+            <!-- TAB 3: Seguridad & RBAC -->
+            <div class="win-tab-pane" id="cdTabSeguridad">
+                <h3>🔐 MODELO DE CONTROL DE ACCESO HÍBRIDO (RBAC + DINÁMICO)</h3>
+                <p>
+                    CAMPUSDESK implementa un modelo de seguridad avanzado donde las facultades efectivas de una sesión son el resultado de la unión entre las facultades heredadas por el rol asignado y los permisos individuales concedidos directamente a la cuenta:
+                </p>
+                
+                <div class="retro-diagram" style="text-align: center; font-weight: bold; font-size: 12px; color: #004d00; background: #eaf5ea;">
+                    Permisos Efectivos = Permisos del Rol ∪ Permisos Individuales
+                </div>
+
+                <h4 style="margin-top: 12px;">1. MATRIZ DE ROLES PRINCIPALES</h4>
+                <div class="retro-table-wrapper">
+                    <table class="retro-table">
+                        <thead>
+                            <tr>
+                                <th>Rol</th>
+                                <th>Destinatarios</th>
+                                <th>Funciones y Responsabilidades Operativas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="tech-pill" style="color: #990000; border-color: #990000;">ADMIN</span></td>
+                                <td>Administradores de TI y Coordinadores</td>
+                                <td>Acceso total al sistema: gestión de cuentas de usuario (alta, baja, bloqueo, reseteo de claves), asignación de roles y permisos, visualización de todos los tickets (<code>TICKET_READ_ALL</code>), asignación de técnicos a tickets (<code>TICKET_ASSIGN</code>) y acceso a métricas globales del dashboard (<code>REPORT_READ</code>).</td>
+                            </tr>
+                            <tr>
+                                <td><span class="tech-pill" style="color: #000099; border-color: #000099;">TECHNICIAN</span></td>
+                                <td>Personal de Soporte Técnico</td>
+                                <td>Atención operativa de incidentes: consulta de tickets asignados (<code>TICKET_READ_ASSIGNED</code>), avance en la máquina de estados del ciclo de vida (<code>TICKET_STATUS_UPDATE</code>), publicación y lectura de comentarios técnicos (<code>COMMENT_CREATE</code>, <code>COMMENT_READ</code>) y auditoría de cambios de estado (<code>HISTORY_READ</code>).</td>
+                            </tr>
+                            <tr>
+                                <td><span class="tech-pill" style="color: #006600; border-color: #006600;">USER</span></td>
+                                <td>Requerientes (Estudiantes, Docentes, Empleados)</td>
+                                <td>Autogestión de requerimientos: radicación de nuevos tickets (<code>TICKET_CREATE</code>), seguimiento de solicitudes propias (<code>TICKET_READ_OWN</code>, <code>TICKET_UPDATE_OWN</code>), confirmación o cierre de ticket resuelto (<code>TICKET_CLOSE</code>) e interacción mediante comentarios.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4 style="margin-top: 14px;">2. FLUJO DE SEGURIDAD Y CICLO DE VIDA DE CONTRASEÑAS</h4>
+                <div class="retro-diagram">
+[ Super Admin crea Usuario ]
+     │
+     ▼  mustChangePassword = true (contraseña temporal generada)
+[ Primer Login del Usuario (/api/auth/login) ]
+     │
+     ▼  Respuesta Backend: { token, mustChangePassword: true }
+[ Frontend bloquea navegación y abre Modal Forzoso de Cambio de Clave ]
+     │
+     ▼  Petición: POST /api/auth/change-password
+[ Backend valida, encripta nueva clave en BCrypt y apaga bandera ]
+     │
+     ▼
+[ Acceso autorizado al Dashboard según el Rol del usuario ]
+                </div>
+
+                <h4 style="margin-top: 12px;">3. INICIALIZACIÓN AUTOMÁTICA DE DATOS (BOOTSTRAP)</h4>
+                <p>
+                    Al arrancar el backend por primera vez, el servicio <code>SecurityBootstrapService</code> ejecuta:
+                </p>
+                <ul style="padding-left: 18px; line-height: 1.6;">
+                    <li>Crea automáticamente los permisos base del sistema (<code>USER_READ</code>, <code>TICKET_CREATE</code>, <code>TICKET_ASSIGN</code>, etc.).</li>
+                    <li>Registra los roles por defecto (<code>ADMIN</code>, <code>TECHNICIAN</code>, <code>USER</code>) y asocia sus permisos correspondientes.</li>
+                    <li>Crea el Super Administrador inicial (por defecto usuario <code>superadmin</code>), listo para el primer acceso seguro.</li>
+                </ul>
+            </div>
+
+            <!-- TAB 4: Configuración & Swagger -->
+            <div class="win-tab-pane" id="cdTabConfig">
+                <h3>⚙️ CONFIGURACIÓN MEDIANTE VARIABLES DE ENTORNO</h3>
+                <p>
+                    El backend lee su configuración de <code>spring-security-user-role-management/src/main/resources/application-dev.properties</code>:
+                </p>
+
+                <div class="retro-table-wrapper">
+                    <table class="retro-table">
+                        <thead>
+                            <tr>
+                                <th>Variable de Entorno</th>
+                                <th>Descripción de Configuración</th>
+                                <th>Valor Predeterminado en Dev</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>DB_URL</code></td>
+                                <td>URL JDBC de conexión a PostgreSQL</td>
+                                <td><code>jdbc:postgresql://localhost:5432/campusDESK</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>DB_USERNAME</code></td>
+                                <td>Usuario para conectarse a PostgreSQL</td>
+                                <td><code>admin</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>DB_PASSWORD</code></td>
+                                <td>Contraseña del usuario de PostgreSQL</td>
+                                <td><code>admin123</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>JWT_SECRET</code></td>
+                                <td>Clave secreta para la firma HMAC256 de los tokens JWT</td>
+                                <td><code>0fb5a8994cde705e2f45ca46...</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>JWT_ISSUER</code></td>
+                                <td>Emisor registrado en el claim iss del token JWT</td>
+                                <td><code>0fb5a8994cde705e2f45ca46...</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>JWT_EXPIRATION</code></td>
+                                <td>Vigencia del token (30m, 8h, 15d o formato ISO-8601)</td>
+                                <td><code>15d</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>ADMIN_USERNAME</code></td>
+                                <td>Nombre de usuario del Super Administrador inicial</td>
+                                <td><code>superadmin</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>ADMIN_EMAIL</code></td>
+                                <td>Correo electrónico del Super Administrador inicial</td>
+                                <td><code>superadmin@localhost</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>ADMIN_PASSWORD</code></td>
+                                <td>Contraseña provisional del Super Administrador</td>
+                                <td><code>SuperAdmin123!</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>BOOTSTRAP_ADMIN_ENABLED</code></td>
+                                <td>Activa la creación de roles, permisos y usuario inicial</td>
+                                <td><code>true</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 style="margin-top: 14px;">🚀 PROCEDIMIENTO DE EJECUCIÓN</h3>
+                <p><strong>1. Backend (Spring Boot en PowerShell):</strong></p>
+                <div class="retro-code-box">cd spring-security-user-role-management
+$env:DB_URL = "jdbc:postgresql://localhost:5432/campusDESK"
+$env:DB_USERNAME = "postgres"
+$env:DB_PASSWORD = "tu_password_de_postgres"
+.\gradlew.bat bootRun</div>
+
+                <p><strong>2. Generación del JAR Autónomo de Producción:</strong></p>
+                <div class="retro-code-box">.\gradlew.bat clean bootJar
+java -jar build/libs/usermanagement-0.0.1-SNAPSHOT.jar</div>
+                <div style="font-size: 10.5px; color: #444; margin-bottom: 8px;">
+                    👉 El servidor backend escucha peticiones en: <code>http://localhost:8051</code>
+                </div>
+
+                <p><strong>3. Frontend (Servidor Web Local):</strong></p>
+                <div class="retro-code-box">cd Frontend
+python -m http.server 5500 --bind 127.0.0.1</div>
+
+                <h3 style="margin-top: 14px;">📖 DOCUMENTACIÓN INTERACTIVA SWAGGER UI</h3>
+                <ul style="padding-left: 18px; line-height: 1.6;">
+                    <li>🌐 <strong>Swagger UI:</strong> <code>http://localhost:8051/swagger-ui.html</code></li>
+                    <li>📄 <strong>Especificación OpenAPI JSON:</strong> <code>http://localhost:8051/v3/api-docs</code></li>
+                </ul>
+
+                <div style="background: #f0f4f9; border: 1px solid #c0d4ed; padding: 8px 10px; border-radius: 2px; margin-top: 6px;">
+                    <strong>Cómo Probar Endpoints Protegidos en Swagger UI:</strong>
+                    <ol style="padding-left: 20px; margin: 4px 0; line-height: 1.5;">
+                        <li>Ejecuta <code>POST /api/auth/login</code> con <code>superadmin</code> / <code>SuperAdmin123!</code>.</li>
+                        <li>Copia el token JWT que retorna la respuesta JSON.</li>
+                        <li>Haz clic en el botón verde <strong>Authorize</strong> (arriba a la derecha en Swagger).</li>
+                        <li>Pega el token en el campo de texto (sin la palabra Bearer) y pulsa Authorize.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- TAB 5: Vistas Frontend -->
+            <div class="win-tab-pane" id="cdTabVistas">
+                <h3>📸 VISTAS Y MÓDULOS DE LA INTERFAZ WEB (FRONTEND)</h3>
+                <p>
+                    El cliente web cuenta con 12 módulos funcionales desarrollados en JavaScript ES6+ Vanilla con arquitectura desacoplada:
+                </p>
+
+                <div class="retro-table-wrapper">
+                    <table class="retro-table">
+                        <thead>
+                            <tr>
+                                <th>Pantalla / Archivo</th>
+                                <th>Rol Destinado</th>
+                                <th>Funcionalidad Clave del Módulo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>index.html</code></td>
+                                <td>Público / Todos</td>
+                                <td>Autenticación mediante usuario o correo, validación de estado de cuenta y modal forzoso de cambio de contraseña ante primer acceso.</td>
+                            </tr>
+                            <tr>
+                                <td><code>superadmin.html</code></td>
+                                <td><span class="tech-pill" style="color: #990000;">ADMIN</span></td>
+                                <td>Visualización de indicadores clave, métricas de tickets en tiempo real y accesos rápidos a administración.</td>
+                            </tr>
+                            <tr>
+                                <td><code>userlist.html</code></td>
+                                <td><span class="tech-pill" style="color: #990000;">ADMIN</span></td>
+                                <td>Catálogo de usuarios registrados, alta con contraseña temporal, bloqueo/desbloqueo, edición y restablecimiento de contraseña.</td>
+                            </tr>
+                            <tr>
+                                <td><code>newuser.html</code></td>
+                                <td><span class="tech-pill" style="color: #990000;">ADMIN</span></td>
+                                <td>Formulario de registro y alta para nuevas cuentas de usuario con contraseña temporal generada.</td>
+                            </tr>
+                            <tr>
+                                <td><code>roleselector.html</code></td>
+                                <td><span class="tech-pill" style="color: #990000;">ADMIN</span></td>
+                                <td>Asignación y revocación dinámica de roles y permisos individuales a usuarios.</td>
+                            </tr>
+                            <tr>
+                                <td><code>assignation.html</code></td>
+                                <td><span class="tech-pill" style="color: #990000;">ADMIN</span></td>
+                                <td>Asignación de requerimientos a operadores técnicos según especialidad y carga de trabajo.</td>
+                            </tr>
+                            <tr>
+                                <td><code>technician.html</code></td>
+                                <td><span class="tech-pill" style="color: #000099;">TECHNICIAN</span></td>
+                                <td>Listado de tickets asignados, transición de estados del ciclo de vida (EN_PROCESO, RESUELTO, etc.) y bitácora de comentarios.</td>
+                            </tr>
+                            <tr>
+                                <td><code>techguys.html</code></td>
+                                <td>ADMIN / TECHNICIAN</td>
+                                <td>Perfiles de operadores técnicos y consulta de especialidades operativas.</td>
+                            </tr>
+                            <tr>
+                                <td><code>user.html</code></td>
+                                <td><span class="tech-pill" style="color: #006600;">USER</span></td>
+                                <td>Panel de bienvenida para el usuario con accesos a reportar incidentes y ver el estado de sus casos.</td>
+                            </tr>
+                            <tr>
+                                <td><code>create-ticket.html</code></td>
+                                <td>USER / ADMIN</td>
+                                <td>Formulario para reportar incidentes con título, descripción detallada, categoría y nivel de prioridad.</td>
+                            </tr>
+                            <tr>
+                                <td><code>my-tickets.html</code></td>
+                                <td><span class="tech-pill" style="color: #006600;">USER</span></td>
+                                <td>Trazabilidad de tickets creados por el usuario con visualización de estado actual y respuestas de soporte.</td>
+                            </tr>
+                            <tr>
+                                <td><code>ticketlist.html</code></td>
+                                <td>ADMIN / TECHNICIAN</td>
+                                <td>Tabla integral de tickets con filtros por estado, prioridad, solicitante y fecha de creación.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="margin-top: 15px; display: flex; justify-content: flex-end; gap: 8px;">
+                    <button class="btn btn-primary" onclick="closeWindow('campusdeskWindow')">Aceptar y Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Skill Detail Dialog -->
     <div class="dialog-box" id="skillDetailDialog" style="width: 380px;">
         <div class="window-titlebar">
@@ -1123,6 +1636,13 @@
                         <div class="xp-start-item-desc">Habilidades y stack tecnológico</div>
                     </div>
                 </div>
+                <div class="xp-start-item pinned" data-window="campusdeskWindow">
+                    <img src="assets/icons/retro/springboot.svg" alt="">
+                    <div class="xp-start-item-texts">
+                        <div class="xp-start-item-title">CampusDesk.exe</div>
+                        <div class="xp-start-item-desc">Mesa de Ayuda (Spring Boot &amp; Security)</div>
+                    </div>
+                </div>
                 <div class="xp-start-item" data-window="contactWindow">
                     <img src="assets/icons/contact.svg" alt="">
                     <div class="xp-start-item-texts">
@@ -1218,6 +1738,9 @@
             </div>
             <div class="start-menu-item" data-window="skillsWindow">
                 <img src="assets/icons/skills.svg" alt=""> Skills.cpl
+            </div>
+            <div class="start-menu-item" data-window="campusdeskWindow">
+                <img src="assets/icons/retro/springboot.svg" alt=""> CampusDesk.exe
             </div>
             <div class="start-menu-item" data-window="contactWindow">
                 <img src="assets/icons/contact.svg" alt=""> Contact.lnk

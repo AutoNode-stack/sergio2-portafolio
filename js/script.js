@@ -249,6 +249,21 @@ function init() {
         aboutBtn.addEventListener('click', () => showDialog('aboutDialog'));
     }
 
+    // Wire tab buttons in windows (e.g. CampusDesk.exe)
+    document.querySelectorAll('.win-tab-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            if (currentOS === 'xp') playAudio('xpClickSound', 0.25);
+            const parent = this.closest('.window, .dialog-box');
+            if (!parent) return;
+            const targetId = this.getAttribute('data-tab');
+            parent.querySelectorAll('.win-tab-btn').forEach(b => b.classList.remove('active'));
+            parent.querySelectorAll('.win-tab-pane').forEach(p => p.classList.remove('active'));
+            this.classList.add('active');
+            const targetPane = parent.querySelector('#' + targetId);
+            if (targetPane) targetPane.classList.add('active');
+        });
+    });
+
     // Wire portfolio contact link specifically
     const portfolioLink = document.getElementById('portfolioContactLink');
     if (portfolioLink) {
@@ -494,6 +509,7 @@ function addToTaskbar(windowId) {
         if (windowId === 'profileWindow') { iconSrc = 'assets/icons/profile.svg'; title = 'Profile.doc'; }
         else if (windowId === 'experienceWindow') { iconSrc = 'assets/icons/experience.svg'; title = 'Experience.exe'; }
         else if (windowId === 'skillsWindow') { iconSrc = 'assets/icons/skills.svg'; title = 'Skills.cpl'; }
+        else if (windowId === 'campusdeskWindow') { iconSrc = 'assets/icons/retro/springboot.svg'; title = 'CampusDesk.exe'; }
         else if (windowId === 'contactWindow') { iconSrc = 'assets/icons/contact.svg'; title = 'Contact.lnk'; }
         else if (windowId === 'solitaireWindow') { iconSrc = 'assets/icons/solitaire.svg'; title = 'Solitaire'; }
         else if (windowId === 'skillsFolderWindow') { iconSrc = 'assets/icons/folder.svg'; title = 'Habilidades'; }
@@ -858,31 +874,34 @@ const SKILL_DETAILS = {
         title: 'Java',
         category: 'Lenguajes de Programación & Backend',
         icon: 'assets/icons/retro/java.svg',
-        level: 'Intermedio - Avanzado / POO Enterprise',
-        description: 'Construcción de aplicaciones empresariales robustas y escalables aplicando POO avanzada, diseño de dominio, manejo de concurrencia y patrones de arquitectura limpia.',
+        level: 'Avanzado / Java 21 LTS Enterprise',
+        description: 'Construcción de aplicaciones empresariales robustas y escalables aplicando POO avanzada, arquitectura limpia, diseño de dominio y persistencia relacional.',
         skills: [
+            'Java 21 LTS (records, pattern matching, virtual threads y API moderna)',
             'Programación Orientada a Objetos, herencia, polimorfismo e interfaces',
             'Patrones de diseño de software y principios SOLID',
             'Java Collections Framework (List, Map, Set) y Streams API',
-            'Gestión de excepciones empresariales y logs de auditoría',
-            'Modelado de dominios complejos y lógica de despacho logístico'
+            'Gestión de excepciones empresariales, DTOs y logs de auditoría',
+            'Modelado de dominios complejos con Spring Boot y JPA/Hibernate'
         ],
-        projects: 'RapidExpress (Gestión de Flotas y Rutas)'
+        projects: 'CAMPUSDESK (Spring Boot 4.1.1 + Java 21), RapidExpress (Gestión de Flotas)'
     },
     springboot: {
         title: 'Spring Boot',
-        category: 'Framework Backend Java',
+        category: 'Framework Backend Java Enterprise',
         icon: 'assets/icons/retro/springboot.svg',
-        level: 'Intermedio / RESTful APIs',
-        description: 'Desarrollo de microservicios y APIs RESTful seguras, modulares y de alto rendimiento utilizando el ecosistema Spring Framework.',
+        level: 'Avanzado / Spring Boot 4.1.1 & Security',
+        description: 'Desarrollo de microservicios y APIs RESTful desacopladas, sin estado (stateless) y de alto rendimiento utilizando Spring Boot 4.1.1 y el ecosistema Spring Framework.',
         skills: [
-            'Diseño e implementación de APIs RESTful con Spring MVC',
-            'Inyección de dependencias e inversión de control (IoC)',
-            'Persistencia de datos y mapeo objeto-relacional con Spring Data / JPA',
-            'Configuración modular y arquitectura en capas (Controller, Service, Repository)',
-            'Validación de datos y manejo global de excepciones'
+            'Arquitectura stateless y filtros de autenticación JWT simétricos HMAC256',
+            'Control de acceso granular RBAC con permisos dinámicos y @PreAuthorize',
+            'Persistencia y ORM con Spring Data JPA / Hibernate (ddl-auto=update)',
+            'Mapeo de DTOs en compilación con MapStruct 1.5.5 y optimización con Lombok',
+            'Documentación interactiva con Springdoc OpenAPI 3 y Swagger UI',
+            'Testing automatizado con Spring Boot Starter Test, Spring Security Test y H2',
+            'Automatización de ciclo de vida con Gradle 8.14.3 Wrapper'
         ],
-        projects: 'Arquitectura Backend y Servicios REST'
+        projects: 'CAMPUSDESK - Plataforma de Mesa de Ayuda y Gestión de Tickets'
     },
     r: {
         title: 'R',
@@ -906,13 +925,13 @@ const SKILL_DETAILS = {
         level: 'Intermedio - Avanzado / SQL Relacional',
         description: 'Administración, modelado y optimización de bases de datos relacionales avanzadas, asegurando integridad transaccional ACID y alta fidelidad de información.',
         skills: [
-            'Diseño de esquemas relacionales normalizados y restricciones de integridad',
-            'Consultas complejas con JOINs, CTEs y funciones de ventana',
-            'Indexación para optimización de rendimiento en grandes volúmenes de datos',
-            'Transacciones ACID y consistencia de datos críticos',
-            'Funciones almacenadas y triggers para automatización de reglas de negocio'
+            'Diseño de esquemas relacionales normalizados y sincronización ddl-auto',
+            'Restricciones de integridad referencial, claves foráneas e índices únicos',
+            'Consultas complejas con JOINs, CTEs y funciones de agregación',
+            'Transacciones ACID y consistencia de datos críticos de negocio',
+            'Integración nativa con Hibernate ORM y Spring Data JPA'
         ],
-        projects: 'Gestión de Datos Empresariales & Servicios Backend'
+        projects: 'CAMPUSDESK (Esquema relacional ddl-auto=update), Coworking Management'
     },
     mysql: {
         title: 'MySQL',
